@@ -6,7 +6,7 @@ import ActionBtn from "./ActionBtn";
 import { ArrowUp } from "lucide-react";
 
 export default async function Account() {
-    const { balance, zpi } = await CreateAccount();
+    const { balance, payz } = await CreateAccount();
 
     return (
         <div className="py-20 px-6 md:px-20 lg:px-32 -mt-2">
@@ -16,7 +16,7 @@ export default async function Account() {
             </div>
             <div className="mt-5 flex items-center justify-center gap-2">
                 <Button asChild><Link href="/dashboard/pay" className="flex items-center justify-center">Pay<ArrowUp className="h-4 w-4" /></Link></Button>
-                <ActionBtn zpiid={zpi} />
+                <ActionBtn payzid={payz} />
             </div>
             <Trans />
         </div>
