@@ -5,7 +5,7 @@ export const UserSchema = new Schema({
         type: String,
         required: true
     },
-    zpi:{
+    payz:{
         type: String,
         required: true
     },
