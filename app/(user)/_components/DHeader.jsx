@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { ClerkLoaded, ClerkLoading, UserButton, currentUser } from "@clerk/nextjs";
-import Zpi from "./Zpi";
+import payz from "./payz";
 import { CreateAccount } from "@/lib/create";
 
 export default async function DHeader() {
