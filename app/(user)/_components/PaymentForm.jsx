@@ -14,11 +14,11 @@ import { useRouter, useSearchParams } from 'next/navigation';
 export default function PaymentForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const paramsZpiId = searchParams.get('zpiid');
+    const paramspayzId = searchParams.get('payzid');
     const [amount, setAmount] = useState("");
 
     const [loading, setLoading] = useState(false);
-    const [zpi, setZpi] = useState(paramsZpiId);
+    const [payz, setpayz] = useState(paramspayzId);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,7 +27,7 @@ export default function PaymentForm() {
             toast.loading("paying securely");
         }
         try {
-            const result = await makeTrans(zpi, amount);
+            const result = await makeTrans(payz, amount);
             if (result.success) {
                 toast.success("payment successfull!");
                 setAmount("");
@@ -52,8 +52,8 @@ export default function PaymentForm() {
                 <h1 className="text-3xl font-bold text-center">Pay Securely<span className="text-primary">.</span></h1>
                 <p className="text-center text-xs">Transfer zen securely anywhere in the world<span className="text-primary">.</span></p>
             </div>
-            <Label htmlFor="email">ZPI Id</Label>
-            <Input value={zpi} onChange={(e) => setZpi(e.target.value)} autoComplete="off" type="text" placeholder="someone@zpi" id="email" required />
+            <Label htmlFor="email">payz Id</Label>
+            <Input value={payz} onChange={(e) => setpayz(e.target.value)} autoComplete="off" type="text" placeholder="someone@payz" id="email" required />
             <Label htmlFor="amount" className="mt-3">Amount</Label>
             <Input value={amount} onChange={(e) => setAmount(e.target.value)} autoComplete="off" type="number" placeholder=">2" min="2" id="amount" required />
             <div className="mt-4 flex gap-2 items-center justify-center">
