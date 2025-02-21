@@ -40,7 +40,7 @@ export default async function Trans() {
                 <TabsContent value="received">
                     <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                         <div className="w-full flex items-center justify-between md:max-w-sm py-4 px-5 bg-background rounded-md border">
-                            <h1 className="text-md">250<span className="text-xs text-primary">Z</span> received from <span className="text-sm">r2hu1</span></h1>
+                            <h1 className="text-md">250<span className="text-xs text-primary">Z</span> received from <span className="text-sm">☠️DOMINATOR☠️</span></h1>
                         </div>
                         {trans.map((item, index) => (
                             <div key={index} className="w-full flex items-center justify-between h-fit md:max-w-sm py-4 px-5 bg-background rounded-md border">
