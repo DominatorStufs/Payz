@@ -20,7 +20,7 @@ import { useTheme } from "next-themes";
 export default function ActionBtn({ payzid }) {
     const { resolvedTheme } = useTheme();
     const qrcodeRef = useRef(null);
-    const payzQr = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://pay-z.vercel.app/dashboard/pay?payzid=${payzid}${resolvedTheme=="dark" ? '&bgcolor=020817&color=f8fafc' : '&bgcolor=fff&color=000'}`;
+    const payzQr = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://payzgo.vercel.app/dashboard/pay?payzid=${payzid}${resolvedTheme=="dark" ? '&bgcolor=020817&color=f8fafc' : '&bgcolor=fff&color=000'}`;
     const handleDownload = () => {
         toast.loading("downloading");
         domtoimage.toJpeg(qrcodeRef.current, { quality: 0.95 })
@@ -52,14 +52,14 @@ export default function ActionBtn({ payzid }) {
                             <img ref={qrcodeRef} src={payzQr} alt="qrcode" className="mx-auto rounded-lg h-[250px] w-[250px] bg-secondary mt-2" />
                             <div className="flex gap-2 mt-4 -mb-5 items-center justify-center">
                                 <Button className="w-full max-w-sm" onClick={handleDownload}>Save</Button>
-                                <Button size="icon" onClick={() => { navigator.share({ title: "Scan and Pay", url: "https://pay-z.vercel.app", text: `Pay with my payz: ${payzid}` }) }} variant="secondary"><Share2 className="h-4 w-4" /></Button>
+                                <Button size="icon" onClick={() => { navigator.share({ title: "Scan and Pay", url: "https://payzgo.vercel.app", text: `Pay with my payz: ${payzid}` }) }} variant="secondary"><Share2 className="h-4 w-4" /></Button>
                             </div>
                         </DialogDescription>
                     </DialogHeader>
                 </DialogContent>
             </Dialog>
             {/* <Button size="icon" variant="secondary" onClick={handleScan}><ScanBarcodeIcon className="h-4 w-4" /></Button> */}
-            <Button variant="secondary" onClick={() => { navigator.share({ text: `Send me some payz coin on my payz id: ${payzid}`, title: "payz", url: "https://pay-z.vercel.app" }); }} className="flex items-center justify-center gap-[2px]" size="icon"><Plus className="h-4 w-4" /></Button>
+            <Button variant="secondary" onClick={() => { navigator.share({ text: `Send me some payz coin on my payz id: ${payzid}`, title: "payz", url: "https://payzgo.vercel.app" }); }} className="flex items-center justify-center gap-[2px]" size="icon"><Plus className="h-4 w-4" /></Button>
         </>
     )
 }
