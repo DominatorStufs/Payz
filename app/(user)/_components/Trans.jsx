@@ -8,7 +8,7 @@ import DeleteTrans from "./DeleteTrans";
 
 export default async function Trans() {
     const user = await currentUser();
-    const email = user.emailAddresses[0].emailAddress.split("@")[0] + "@zpi";
+    const email = user.emailAddresses[0].emailAddress.split("@")[0] + "@payz";
     const trans = await getHist();
     const fromTrans = await getFromHist();
 
