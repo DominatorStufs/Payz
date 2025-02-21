@@ -5,7 +5,7 @@ import { CreateAccount } from "@/lib/create";
 
 export default async function DHeader() {
     const user = await currentUser();
-    const zpi = user?.emailAddresses[0]?.emailAddress?.split("@")[0] + "@payz";
+    const payz = user?.emailAddresses[0]?.emailAddress?.split("@")[0] + "@payz";
 
     return (
         <header className="flex items-center justify-between py-6 px-6 md:px-20 lg:px-32">
@@ -18,10 +18,10 @@ export default async function DHeader() {
                 </ClerkLoading>
             </div>
             <div>
-                {!zpi ? (
+                {!payz ? (
                     <Skeleton className="h-8 w-32 rounded-full" />
                 ) : (
-                    <Zpi zpi={zpi} />
+                    <payz payz={payz} />
                 )}
             </div>
         </header>
