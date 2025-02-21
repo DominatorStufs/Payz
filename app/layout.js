@@ -12,8 +12,8 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: 'ZenPay',
-    template: '%s | ZenPay',
+    default: 'PayZ',
+    template: '%s | PayZ',
   },
   description: 'An frictional currency powered and built by javascript.',
 }
