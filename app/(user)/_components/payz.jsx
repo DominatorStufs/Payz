@@ -12,7 +12,7 @@ export default function payz({ payz, showshare = true }) {
             {showshare && (
                 <ModeToggle className="bg-transparent border-none"/>
             )}
-            {/* <Button size="icon" className="rounded-full" onClick={() => { navigator.share({ title: "PayZ", url: "https://payz.vercel.app" }); }}><Share2 className="h-4 w-4" /></Button> */}
+            {/* <Button size="icon" className="rounded-full" onClick={() => { navigator.share({ title: "PayZ", url: "https://pay-z.vercel.app" }); }}><Share2 className="h-4 w-4" /></Button> */}
         </div>
     )
 }
