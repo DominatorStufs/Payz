@@ -1,6 +1,6 @@
-# ZenPay Virtual Currency
+# Payz Virtual Currency
 
-ZenPay is a virtual currency system designed to facilitate secure and seamless digital transactions. Built with JavaScript, Next.js, MongoDB, Shadow-cljs, and Clerk authentication, ZenPay offers a modern and efficient platform for managing virtual currencies.
+Payz is a virtual currency system designed to facilitate secure and seamless digital transactions. Built with JavaScript, Next.js, MongoDB, Shadow-cljs, and Clerk authentication, ZenPay offers a modern and efficient platform for managing virtual currencies.
 (hobby project)
 
 # Preview
@@ -27,12 +27,12 @@ Follow these steps to set up and run ZenPay on your local machine:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/r2hu1/zenpay.git
+   git clone https://github.com/DominatorStufs/Payz.git
    ```
 
 2. **Install Dependencies:**
    ```bash
-   cd zenpay
+   cd payz
    npm install
    ```
 
